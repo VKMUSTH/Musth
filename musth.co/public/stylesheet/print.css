@@ -1,0 +1,15 @@
+
+body header {display:none;}
+body footer {display:none;}
+table.display  {display:none; }
+tr.display  {display:none; }
+td.display  {display:none; }
+td.inputnum  {display:none; }
+
+
+
+
+div.fondbleuprint {background:#ffffff; /*e3e9ff*/}
+
+/*img.print {display:none}
+#printheader {display: block; } /* Turns ON the div when printing */
