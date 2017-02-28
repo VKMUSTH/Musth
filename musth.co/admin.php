@@ -16,47 +16,47 @@ while($admin = mysql_fetch_assoc($req)) { ?>
 			</td>
 		<TR valign=top colspan="4">
 			<TD align=center  valign=top colspan="8">
-				<a href="http://www.youtube.com/" target="_blank">					<img src="images/favicon/icn.youtube.hover.png" />		</a>
-				<a href="https://www.facebook.com/MusthStartup" target="_blank">			<img src="images/favicon/icn.facebook.hover.png" />		</a>
-				<a href="https://twitter.com/#!/" target="_blank">					<img src="images/favicon/icn.twitter.hover.png" />		</a>
-				<a href="http://www.linkedin.com/" target="_blank">					<img src="images/favicon/icn.linkedin.hover.png" />		</a>
-				<a href="https://plus.google.com/u/0/111097159631773304608/posts" target="_blank">	<img src="images/favicon/icn.google.plus.hover.png" />		</a>
-				<a href="http://www.viadeo.com/p/002213881qumpgq8" target="_blank">			<img src="images/favicon/icn.viadeo.hover.png"  />		</a>
-				<a href="https://branded.me/home" target="_blank">					<img src="images/favicon/icn.brandedme.hover.png"  />		</a>
-				<a href="https://www.paypal.com/fr/home" target="_blank">				<img src="images/favicon/icn.paypal.hover.png" />		</a>
-				<a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank">		<img src="images/favicon/icn.gmail.hover.png" />		</a>
-				<a href="https://www.caisse-epargne.fr" target="_blank">				<img src="images/favicon/icn.caisse.epargne.hover.png" />	</a>
-				<a href="http://my.ebay.fr/ws/eBayISAPI.dll?MyEbay&gbh=1" target="_blank">		<img src="images/favicon/icn.ebay.hover.png" />			</a>
+				<a href="http://www.youtube.com/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.youtube.hover.png" />		</a>
+				<a href="https://www.facebook.com/MusthStartup" target="_blank">	<img src="../musth.co/public/images/favicon/icn.facebook.hover.png" />		</a>
+				<a href="https://twitter.com/#!/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.twitter.hover.png" />		</a>
+				<a href="http://www.linkedin.com/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.linkedin.hover.png" />		</a>
+			<a href="https://plus.google.com/u/0/111097159631773304608/posts" target="_blank"><img src="../musth.co/public/images/favicon/icn.google.plus.hover.png" />		</a>
+				<a href="http://www.viadeo.com/p/002213881qumpgq8" target="_blank">	<img src="../musth.co/public/images/favicon/icn.viadeo.hover.png"  />		</a>
+				<a href="https://branded.me/home" target="_blank">			<img src="../musth.co/public/images/favicon/icn.brandedme.hover.png"  />		</a>
+				<a href="https://www.paypal.com/fr/home" target="_blank">		<img src="../musth.co/public/images/favicon/icn.paypal.hover.png" />		</a>
+				<a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank"><img src="../musth.co/public/images/favicon/icn.gmail.hover.png" />		</a>
+				<a href="https://www.caisse-epargne.fr" target="_blank">		<img src="../musth.co/public/images/favicon/icn.caisse.epargne.hover.png" />	</a>
+				<a href="http://my.ebay.fr/ws/eBayISAPI.dll?MyEbay&gbh=1" target="_blank"><img src="../musth.co/public/images/favicon/icn.ebay.hover.png" />			</a>
 				<a href="https://boutique.laposte.fr/affranchissement-a-domicile/mon-timbre-en-ligne/personalisation/selectionner-categorie?categoryCode=NoirEtBlanc" target="_blank">	
-															<img src="../../../../images/favicon/icn.laposte.hover.png" />		</a>
-				<a href="http://www.pole-emploi.fr/accueil/" target="_blank" title="3376463U">		<img src="images/favicon/icn.pole.emploi.hover.png" />		</a>
-				<a href="http://www.leboncoin.fr" target="_blank" title="">				<img src="images/favicon/icn.leboncoin.hover.png" />		</a>	
-				<a href="https://www.caf.fr/" target="_blank" title="4491268">				<img src="images/favicon/icn.caf.hover.png" />			</a>
-				<a href="http://french.alibaba.com/" target="_blank" alt="VK">				<img src="images/favicon/icn.alibaba.hover.png" />		</a>
-				<a href="http://fr.aliexpress.com/" target="_blank" alt="VK">				<img src="images/favicon/icn.aliexpress.hover.png" />		</a>
-				<a href="https://www.gandi.net/admin/hosting/paas/41675" target="_blank">		<img src="images/favicon/icn.gandi.hover.png" />		</a>
-				<a href="https://www.gandi.net/?currency=EUR&lang=fr" target="_blank">			<img src="images/favicon/icn.gandi.hover.png" />		</a>
-				<a href="https://translate.google.fr/#auto/fr/" target="_blank">			<img src="images/favicon/icn.googletraduction.hover.png" />	</a>
-				<a href="https://1669246.admin.dc0.gpaas.net/" target="_blank">				<img src="images/favicon/icn.serveur.hover.png" />		</a>
-				<a href="http://localhost/phpmyadmin/" target="_blank">					<img src="images/favicon/icn.pma.hover.png" />			</a>
-				<a href="https://1669246.admin.dc0.gpaas.net/phpmyadmin/index.php" target="_blank">	<img src="images/favicon/icn.pma.hover.png" />			</a>
-				<a href="http://livebox" target="_blank">						<img src="images/favicon/icn.orange.hover.png" />		</a>
-				<a href="http://localhost:631/" target="_blank">					<img src="images/favicon/icn.orange.hover.png" />		</a>
-				<a href="https://www.cinemadutrefle.com" target="_blank">				<img src="images/favicon/icn.trefle.hover.png" />		</a>
-				<a href="http://www.urssaf.fr/" target="_blank">					<img src="images/favicon/icn.urssaf.hover.png" />		</a>
-				<a href="http://www.koudetatondemand.co" target="_blank" >				<img src="images/favicon/icn.koudetat.hover.png" />		</a>
-				<a href="https://www.thefamily.co/" target="_blank" alt="the family">			<img src="images/favicon/icn.thefamily.hover.png" />		</a>
-				<a href="http://picclick.fr" target="_blank" alt="">					<img src="images/favicon/icn.thefamily.hover.png" />		</a>
-				<a href="https://www.twitch.tv/thinkstartup" target="_blank" alt="">			<img src="images/favicon/icn.twitch.hover.png" />		</a>
+													<img src="../musth.co/public/images/favicon/icn.laposte.hover.png" />		</a>
+				<a href="http://www.pole-emploi.fr/accueil/" target="_blank" title="3376463U">		<img src="../musth.co/public/images/favicon/icn.pole.emploi.hover.png" />		</a>
+				<a href="http://www.leboncoin.fr" target="_blank" title="">		<img src="../musth.co/public/images/favicon/icn.leboncoin.hover.png" />		</a>	
+				<a href="https://www.caf.fr/" target="_blank" title="4491268">		<img src="../musth.co/public/images/favicon/icn.caf.hover.png" />			</a>
+				<a href="http://french.alibaba.com/" target="_blank" alt="VK">		<img src="../musth.co/public/images/favicon/icn.alibaba.hover.png" />		</a>
+				<a href="http://fr.aliexpress.com/" target="_blank" alt="VK">		<img src="../musth.co/public/images/favicon/icn.aliexpress.hover.png" />		</a>
+				<a href="https://www.gandi.net/admin/hosting/paas/41675" target="_blank">		<img src="../musth.co/public/images/favicon/icn.gandi.hover.png" />		</a>
+				<a href="https://www.gandi.net/?currency=EUR&lang=fr" target="_blank">	<img src="../musth.co/public/images/favicon/icn.gandi.hover.png" />		</a>
+				<a href="https://translate.google.fr/#auto/fr/" target="_blank">	<img src="../musth.co/public/images/favicon/icn.googletraduction.hover.png" />	</a>
+				<a href="https://1669246.admin.dc0.gpaas.net/" target="_blank">		<img src="../musth.co/public/images/favicon/icn.serveur.hover.png" />		</a>
+				<a href="http://localhost/phpmyadmin/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.pma.hover.png" />			</a>
+				<a href="https://1669246.admin.dc0.gpaas.net/phpmyadmin/index.php" target="_blank">	<img src="../musth.co/public/images/favicon/icn.pma.hover.png" />			</a>
+				<a href="http://livebox" target="_blank">				<img src="../musth.co/public/images/favicon/icn.orange.hover.png" />		</a>
+				<a href="http://localhost:631/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.orange.hover.png" />		</a>
+				<a href="https://www.cinemadutrefle.com" target="_blank">		<img src="../musth.co/public/images/favicon/icn.trefle.hover.png" />		</a>
+				<a href="http://www.urssaf.fr/" target="_blank">			<img src="../musth.co/public/images/favicon/icn.urssaf.hover.png" />		</a>
+				<a href="http://www.koudetatondemand.co" target="_blank" >		<img src="../musth.co/public/images/favicon/icn.koudetat.hover.png" />		</a>
+				<a href="https://www.thefamily.co/" target="_blank" alt="the family">	<img src="../musth.co/public/images/favicon/icn.thefamily.hover.png" />		</a>
+				<a href="http://picclick.fr" target="_blank" alt="">			<img src="../musth.co/public/images/favicon/icn.thefamily.hover.png" />		</a>
+				<a href="https://www.twitch.tv/thinkstartup" target="_blank" alt="">			<img src="../musth.co/public/images/favicon/icn.twitch.hover.png" />		</a>
 				<!--a href="http://www.tumblr.com/dashboard" target="_blank">				<img src="images/favicon/icn.tumblr.hover.png" />		</a-->
 				<!--a href="http://www.ameli.fr/#" target="_blank" title="4491268">			<img src="images/favicon/icn.caf.hover.png" />			</a-->
 				<!--a href="http://www.apce.com/" target="_blank" alt="APCE"><img src="../../../images/favicon/icn.apce.hover.png" /></a-->
 				<!--a href="http://www.blogger.com/home" target="_blank" alt="BLOGGER">			<img src="images/favicon/icn.blogger.hover.png" />		</a-->
 				<a href="https://www.google.com/analytics/web/?authuser=0#home/a51746963w84064915p87104553/" target="_blank">
-															<img src="images/favicon/icn.google.analytics.hover.png" />	</a>	
-				<a href="https://drive.google.com/#my-drive" target="_blank">				<img src="images/favicon/icn.google.drive.hover.png" />	</a>
+															<img src="../musth.co/public/images/favicon/icn.google.analytics.hover.png" />	</a>	
+				<a href="https://drive.google.com/#my-drive" target="_blank">				<img src="../musth.co/public/images/favicon/icn.google.drive.hover.png" />	</a>
 				<a href="https://www.google.com/finance/converter?a=1&from=USD&to=EUR&meta=ei%3DncPYVbqfJ8bDUOrqh5AG" target="_blank">
-															<img src="images/favicon/icn.devises.hover.png" />		</a>
+															<img src="../musth.co/public/images/favicon/icn.devises.hover.png" />		</a>
 
 			</TD>
 		</TR>
@@ -143,3 +143,5 @@ mysql_close();
 	<?php
 	}
 	?>
+
+
