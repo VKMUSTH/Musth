@@ -30,6 +30,8 @@ Then install php
 <br>
 THen install mysql suite and configure it
 <br>
+Install phpmyadmin
+<br>
 install zend framework
 <br>
 extract the file into your dowloads section
