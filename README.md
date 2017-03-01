@@ -20,3 +20,18 @@ Assemblage des prestations de Transport- Hébergement -Restauration - Visites - 
 <br>Dossier de création d'entreprise
 <br>Bulletin de souscription d'action
 <br>Gestion de parts d'associés dans une SAS
+
+
+++++ INSTALLATION GUIDE ++++
+
+You need to have previously installed the apache suite on you computer, then dowload the zipfile on git hub.
+<br>
+extract the file into your dowloads section
+<br>
+rename the file Musth-master into html
+<br>
+copy this file and past it in your wwww folder
+<br>
+run musth.co.tld in your searchbar
+<br>
+enjoy the Musth
