@@ -46,6 +46,6 @@ cat /etc/hosts
 musth.co.tld
 <br>
 cat /etc/hostname
-musth
+musth.co.tld
 <br>
 
