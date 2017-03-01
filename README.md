@@ -38,6 +38,8 @@ extract the file into your dowloads section
 <br>
 rename the file Musth-master into html
 <br>
+créer le lien symbolique vers phpmyadmin depuis html
+<br>
 copy this file and past it in your wwww folder
 <br>
 run musth.co.tld in your searchbar
