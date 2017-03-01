@@ -11,10 +11,7 @@
 	<body class=white bgcolor=#ffffff>
 		<div class=conteneur>
 		<div class=fondblancprint>
-		<?php
-			include "musth.co/admin.php"; 
-
-		?>
+		<?php include "musth.co/admin.php"; ?>
 	</body>
 
 </html>
