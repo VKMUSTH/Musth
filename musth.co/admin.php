@@ -1,3 +1,7 @@
+	<?php
+		include "connexion_sql.php";
+		include "config_menu.php";
+	?>
 <?php
 $sql = 'SELECT * FROM admin WHERE id = \'1\'';
 $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
@@ -143,5 +147,4 @@ mysql_close();
 	<?php
 	}
 	?>
-
 
