@@ -30,6 +30,8 @@ Then install php
 <br>
 THen install mysql suite and configure it
 <br>
+install zend framework
+<br>
 extract the file into your dowloads section
 <br>
 rename the file Musth-master into html
