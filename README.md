@@ -39,3 +39,13 @@ copy this file and past it in your wwww folder
 run musth.co.tld in your searchbar
 <br>
 enjoy the Musth
+<br>
+Make shure you have this written in:
+<br>
+cat /etc/hosts
+musth.co.tld
+<br>
+cat /etc/hostname
+musth
+<br>
+
