@@ -26,6 +26,10 @@ Assemblage des prestations de Transport- Hébergement -Restauration - Visites - 
 
 You need to have previously installed the apache suite on you computer, then dowload the zipfile on git hub.
 <br>
+Then install php
+<br>
+THen install mysql suite and configure it
+<br>
 extract the file into your dowloads section
 <br>
 rename the file Musth-master into html
