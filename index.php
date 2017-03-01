@@ -24,3 +24,4 @@ mysql_select_db($database);
 		?>
 	</body>
 
+</html>
