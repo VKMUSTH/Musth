@@ -50,4 +50,5 @@ musth.co.tld
 cat /etc/hostname
 musth.co.tld
 <br>
+set your mysql password in connexion_sql file
 
