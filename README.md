@@ -55,4 +55,5 @@ cat /etc/hostname
 musth.co.tld
 <br>
 set your mysql password in connexion_sql file
-
+<br>
+entrez votre mode passe dans le fichier connexion_sql.php
