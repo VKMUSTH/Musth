@@ -28,9 +28,9 @@
 			<TD  COLSPAN=12 ALIGN=CENTER VALIGN=MIDDLE >				<B>MODIFIER INSCRIPTION</B>			</TD>		
 		</TR>
 		<TR HEIGHT=16 ALIGN=LEFT class="niv2">
-				<TD STYLE="width:20%;  border-left: 1px solid #b8bec3;" colspan=3>	<B>Date</B>				</TD>
-				<TD STYLE="width:70%; " >					<B>Designation</B>			</TD>
-				<TD STYLE="width:10%; border-right: 1px solid #b8bec3" >	<B>Commande</B>				</TD>
+			<TD STYLE="width:20%;  border-left: 1px solid #b8bec3;" colspan=3>	<B>Date</B>					</TD>
+			<TD STYLE="width:70%; " >						<B>Designation</B>				</TD>
+			<TD STYLE="width:10%; border-right: 1px solid #b8bec3" >		<B>Commande</B>					</TD>
 		</TR>
 		<?php if (isset($admin['numinscription']) ) { ?>
 		<?php
@@ -54,11 +54,11 @@
 		?>
 			<form  action="charger_date.php"  method="post">
 		<TR ALIGN=LEFT>
-			<TD>	<input type="text" name="var_jour" id="var_jour" value="<?php echo $jour; ?>"/></TD>
-			<TD>	<input type="text" name="var_mois" id="var_mois" value="<?php echo $mois;?>"/></TD>
-			<TD>	<input type="text" name="var_annee" id="var_annee" value="<?php echo $annee; ?>"/></TD>
-			<TD>	<input type="text" name="inscription" id="inscription" value="<?php echo $inscription['inscription']  ; ?>"/></TD>
-			<TD>		<button type="submit" class=envoyer >CONFIRMER</button>	</TD>		
+			<TD>	<input type="text" name="var_jour" id="var_jour" value="<?php echo $jour; ?>"/>					</TD>
+			<TD>	<input type="text" name="var_mois" id="var_mois" value="<?php echo $mois;?>"/>					</TD>
+			<TD>	<input type="text" name="var_annee" id="var_annee" value="<?php echo $annee; ?>"/>				</TD>
+			<TD>	<input type="text" name="inscription" id="inscription" value="<?php echo $inscription['inscription']  ; ?>"/>	</TD>
+			<TD>	<button type="submit" class=envoyer >CONFIRMER</button>								</TD>		
 		</TR>
 				</form>
 		<?php } //$get_inscription ?>
