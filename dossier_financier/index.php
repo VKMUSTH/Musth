@@ -35,13 +35,8 @@
 			</td>
 		</tr>	
 	</table>
-	<?php // if (isset(
-	//$admin['numclient'],
-	//$admin['annee_en_cours']
-	//) ) {?>
 		<?php $niv = ''; include($niv.'previsions/index2.php');?> <br>
 		<?php $niv = ''; include($niv.'tresorerie/index2.php');?>	
 		<?php $niv = ''; include($niv.'decompte/index.php');?>
 		<?php $niv = ''; include($niv.'convertisseur/admin.php');?>
-	<?php//}?>
 	<?php } mysql_close(); ?>
