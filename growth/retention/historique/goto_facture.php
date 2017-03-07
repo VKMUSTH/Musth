@@ -7,5 +7,5 @@ $get_numcontact = $bdd->prepare('UPDATE admin SET numcontact = :nv_numcontact WH
 $get_numcontact->execute(array('nv_numcontact' => $_POST['numcontact']));
 
 
-header('Location: ../../../achats/facture');
+header('Location: ../../../operations/facture');
 ?>
