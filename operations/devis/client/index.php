@@ -46,7 +46,7 @@ while($admin = mysql_fetch_assoc($req)) { ?>
 	<?php//REMARQUE SUR LES PRIX?>			
 				<?php $niv = ''; include($niv.'remarque_prix/remarque-prix1.php');?>
 	<?php//CACHET ET SIGNATURE	?>		
-				<?php $niv = ''; include($niv.'cachet-signature.php');?> 
+				<?php $niv = ''; include($niv.'cachet_signature.php');?> 
 	<?php//MENTIONS LEGALES?>
 				<?php $niv = '';include($niv.'../../mentions_legales/admin.php');?>
 	<?php } //$get_client ?>
