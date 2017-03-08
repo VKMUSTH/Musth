@@ -9,9 +9,7 @@
 			<td class=inputnum><label><a href="">N° Dossier</a></label><input type="text" name="numdossier" value="1" id="numdossier" />		
 				<input type="button" onclick="location.href='nouveau'" value="Nouveau" />
 			</td>
-			<td class=inputnum><label><a href="">N° Client</a></label><input type="text" name="numclient" value="1" id="numclient" />		
-			<input type="button"  onclick="location.href='../modules'" value="modules" />
-			</td>
+			<td class=inputnum><label><a href="">N° Client</a></label><input type="text" name="numclient" value="1" id="numclient" />	</td>
 			<td class=inputnum><label><a>N° Produit</a></label><input type="text" name="numproduit" value="1" id="numproduit" />		
 				<form  action="supprimer.php"  method="post">
 				<input type="text" value="<?php echo $admin['position']  ; ?>" name="position" id="position" HIDDEN/>
