@@ -9,7 +9,6 @@
 
 			<td class="inputnum">
 				<input type="button" onclick="location.href='nouveau'" value="Nouveau" />
-			<input type="button"  onclick="location.href='modules'" value="modules" />
 		</tr>
 	</table>
 
