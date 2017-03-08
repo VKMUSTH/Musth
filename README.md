@@ -57,3 +57,6 @@ musth.co.tld
 set your mysql password in connexion_sql file
 <br>
 entrez votre mode passe dans le fichier connexion_sql.php
+
+
+https://cloud.githubusercontent.com/assets/22053566/23689114/cc5a71ae-03b8-11e7-9cc5-dde71c1b00c5.png
