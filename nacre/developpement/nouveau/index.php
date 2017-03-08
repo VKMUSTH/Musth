@@ -15,7 +15,7 @@
 
 	</table>
 
-<form  action="postretroplanning.php"  method="post">
+<form  action="enregistrer.php"  method="post">
 <input type="text" name="devel" value="1" id="devel" hidden/>
 	<table border=0 cellpadding=0 cellspacing=0  >
 			<TR BGCOLOR="#d8dfea"><TD  COLSPAN=9 ALIGN=CENTER VALIGN=MIDDLE >		<B>NOUVEL ÉVÈNEMENT</B>			</TD>		</TR>
