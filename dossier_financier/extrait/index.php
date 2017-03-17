@@ -38,8 +38,8 @@
 			<TD class="display" STYLE="width:10%;" >		<B>Comande</B>											</TD>
 		</TR>
 		<?php
-//$moins = $admin['mois_en_cours']-1;
-$moins = 01;
+$moins = $admin['mois_en_cours']-1;
+//$moins = 01;
 		?>
 		<?php
 		$sql1 = 'SELECT 
