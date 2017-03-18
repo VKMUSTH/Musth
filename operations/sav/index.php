@@ -32,7 +32,7 @@
 <tr><td><a href="https://speakerdeck.com/djo/lobsession-du-service-client-chez-captain-train">Sile building support Musth</a></td>
 	</table>
 	<BR>
-	<?php $niv = ''; include($niv.'calendrier/admin.php');?>
+	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0  >
 		<TR class="niv1">
 			<TD colspan=12 >				<B>CLIENTS SAV</B>													</TD>
