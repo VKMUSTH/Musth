@@ -25,7 +25,7 @@
 		</tr>	
 	</table>
 	<BR>
-	<?php include($niv.'calendrier/admin.php');?>
+	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<TR class="niv1">
 			<TD colspan=12 ><B>CLIENTS DONT LA MARCHANDISE A ÉTÉ ENVOYÉE</B></TD>
