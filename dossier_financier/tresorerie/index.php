@@ -28,7 +28,7 @@ while($admin = mysql_fetch_assoc($req)) {?>
 				</form>
 			</td>
 	</table>
-	<?php $niv = ''; include($niv.'calendrier/admin.php');?>
+	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<TR class="niv1">
 			<TD  COLSPAN=5 ALIGN=CENTER VALIGN=MIDDLE >				<B>PAYÉS</B>											</TD>	
