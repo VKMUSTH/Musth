@@ -10,14 +10,14 @@
 		$req1 = mysql_query($sql1) or die('Erreur SQL !<br>'.$sql1.'<br>'.mysql_error());
 		while($client = mysql_fetch_assoc($req1)) { ?>	
 			<td><h1><?php echo $client['numclient']; ?></h1>															</td>
-		<?php } //$get_client ?>
+		<?php } //get_client ?>
 
-				<form action="getnumclient.php" method="post" >
+				<form action="get_numclient.php" method="post" >
 			<td class=inputnum><label><a href="">N° Client</a></a></label><input type="text" name="numclient" value="<?php echo $admin['numclient']  ; ?>" id="numclient" />
 				</form>
 			<input type="button"  onclick="location.href='extrait'" value="Extrait" />
 			</td>
-				<form action="getmoisencours.php" method="post" >
+				<form action="get_mois.php" method="post" >
 			<td class=inputnum><label><a href="">Mois</a></label><input type="text" name="mois_en_cours" value="<?php echo $admin['mois_en_cours']  ; ?>" id="mois_en_cours" />
 				</form>
 				<form action="get_annee_inf_sup.php" method="post" >
@@ -25,7 +25,7 @@
 				<button type="submit" class="button">[-]</button> 
 				</form>
 			</td>
-				<form action="getanneeencours.php" method="post" >
+				<form action="get_annee.php" method="post" >
 			<td class=inputnum><label><a href="">Année<a></label><input type="text"  name="annee_en_cours" id="annee_en_cours" value="<?php echo $admin['annee_en_cours']  ; ?>"	 />
 				</form>
 				<form action="get_annee_inf_sup.php" method="post" >
