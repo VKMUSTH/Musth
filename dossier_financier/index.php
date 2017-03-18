@@ -20,7 +20,7 @@
 				<form action="getmoisencours.php" method="post" >
 			<td class=inputnum><label><a href="">Mois</a></label><input type="text" name="mois_en_cours" value="<?php echo $admin['mois_en_cours']  ; ?>" id="mois_en_cours" />
 				</form>
-				<form action="get_annee_inf.php" method="post" >
+				<form action="get_annee_inf_sup.php" method="post" >
 				<input type="text"  name="annee_en_cours" value="<?php echo $admin['annee_en_cours']-1  ; ?>"  id="annee_en_cours" hidden />
 				<button type="submit" class="button">[-]</button> 
 				</form>
@@ -28,7 +28,7 @@
 				<form action="getanneeencours.php" method="post" >
 			<td class=inputnum><label><a href="">Année<a></label><input type="text"  name="annee_en_cours" id="annee_en_cours" value="<?php echo $admin['annee_en_cours']  ; ?>"	 />
 				</form>
-				<form action="get_annee_sup.php" method="post" >
+				<form action="get_annee_inf_sup.php" method="post" >
 				<input type="text"  name="annee_en_cours" value="<?php echo $admin['annee_en_cours']+1 ; ?>"  id="annee_en_cours" hidden />
 				<button type="submit" class="button">[+]</button> 
 				</form>
