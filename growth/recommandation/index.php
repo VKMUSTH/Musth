@@ -30,7 +30,7 @@
 		</tr>	
 	</table>
 	<BR>
-	<?php $niv = ''; include($niv.'calendrier/admin.php');?>
+	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<TR class="niv1">
 			<TD  COLSPAN=2 ALIGN=CENTER VALIGN=MIDDLE >				<B>ACTUALITÉS</B>							</TD>		
