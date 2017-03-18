@@ -35,8 +35,7 @@
 			</td>
 		</tr>	
 	</table>
-		<?php $niv = ''; include($niv.'previsions/index2.php');?> <br>
-		<?php $niv = ''; include($niv.'tresorerie/index2.php');?>	
-		<?php $niv = ''; include($niv.'decompte/index.php');?>
-		<?php $niv = ''; include($niv.'convertisseur/admin.php');?>
+	<?php include($niv.'previsions/index2.php');?> <br>
+	<?php include($niv.'tresorerie/index2.php');?>	
+	<?php include($niv.'decompte/index.php');?>
 	<?php } mysql_close(); ?>
