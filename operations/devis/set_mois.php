@@ -8,5 +8,5 @@ $set_donnees->execute(array(
 	'nv_mois_en_cours' => $_POST['mois_en_cours'],
 	'nv_annee_en_cours' => $_POST['annee_en_cours']
 		));
-header('Location: ..');
+header('Location: ../devis');
 ?>
