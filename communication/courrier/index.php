@@ -27,7 +27,7 @@ while($admin = mysql_fetch_assoc($req)) { ?>
 			<td class="inputnum">	<input type="button"  onclick="location.href='contacts_utiles'" value="Contacts utiles" />							</td>
 		</tr>
 	</table>
-	<?php include($niv.'calendrier/admin.php');?>
+	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<TR class="niv1">
 			<TD  COLSPAN=9 ALIGN=CENTER VALIGN=MIDDLE >				<B>COURRIERS RÉCENTS</B>									</TD>	
