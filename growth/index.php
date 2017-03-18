@@ -32,6 +32,6 @@
 				</form>
 			</td>
 	</table>
-	<?php $niv = ''; include($niv.'calendrier/index.php');?>
+	<?php include($niv.'../calendrier.php');?>
 	<?php $niv = ''; include($niv.'strategie/index.php');?>		<br>
 	<?php } mysql_close(); ?>
