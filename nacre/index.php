@@ -48,8 +48,8 @@ while($admin = mysql_fetch_assoc($req))
 			</td>
 		</tr>	
 	</table>
-	<?php $niv = ''; include($niv.'calendrier/admin.php');?>
-		<?php
+	<?php include($niv.'../calendrier.php');?>
+<?php
 		$sql1 = 'SELECT 
 		position,
 		programme,
