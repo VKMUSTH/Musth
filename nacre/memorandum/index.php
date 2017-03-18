@@ -26,8 +26,8 @@
 			<td class="inputnum">	<input type="button" onclick="location.href='entete'" value="papier entête" />									</td>
 		</tr>
 	</table>
-	<?php include($niv.'calendrier/admin.php');?>
-	<table border=0 cellpadding=0 cellspacing=0 >
+	<?php include($niv.'../../calendrier.php');?>
+<table border=0 cellpadding=0 cellspacing=0 >
 		<TR class="niv1">
 			<TD  COLSPAN=9 ALIGN=CENTER VALIGN=MIDDLE >				<B>MÉMORANDUMS RÉCENTS</B>									</TD>	
 		</TR>
