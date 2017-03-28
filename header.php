@@ -1,11 +1,11 @@
 <html>
 <head>
 	<title>Musth &#8250; Accueil</title>
-	<link href="../../../../../musth.co/public/stylesheet/musth.css" 	rel="stylesheet" 	type="text/css">
-	<link href="../../../../../musth.co/public/stylesheet/print.css" 	rel="stylesheet" 	type="text/css" media="print">
-	<link href="../../../../../musth.co/public/images/favicon/icn.musth.hover.png"	rel="icon" 		type="image/png"/>
+	<link href="../../../../../../../musth.co/public/stylesheet/musth.css" 	rel="stylesheet" 	type="text/css">
+	<link href="../../../../../../../musth.co/public/stylesheet/print.css" 	rel="stylesheet" 	type="text/css" media="print">
+	<link href="../../../../../../../musth.co/public/images/favicon/icn.musth.hover.png"	rel="icon" 		type="image/png"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<div class="logo" align=center><a href="http://musth.co.tld/Musth-master" >	<img rel="icon" alt="Musth" src="../../../../../musth.co/public/images/logo/musth_logos.png"/></a> 
+	<div class="logo" align=center><a href="http://musth.co.tld/" >	<img rel="icon" alt="Musth" src="../../../../../../../musth.co/public/images/logo/musth_logos.png"/></a> 
 	<?php
 	// on se connecte à MySQL
 	include "connexion_sql.php";
@@ -38,17 +38,22 @@ fclose($handle2);
 				<header>		
 				<?php 
 					$i=0;
-					while (list($key, $value) = each($valeurmenu))
+					while (list($key, $value) = each($keymenu)) 
 					{
+							 
+							
+
+
 						if($i++)echo '<a> | </a>';				
 						if($key ==  $contents )
 						{
-							echo '<a href="../menu.php?'.$key.'" style=color:#214d7e>'.$value.'</a>';
+							echo '<a href="../menu.php?'.$value.'" style=color:#214d7e>'.$value.'</a>';
 						}
 						else
 						{
-							echo '<a href="../menu.php?'.$key.'">'.$value.'</a>';
+							echo '<a href="../menu.php?'.$value.'">'.$value.'</a>';
 						}
+							
 					}
 				?>
 				<div id="filet"></div>			
@@ -56,16 +61,16 @@ fclose($handle2);
 				<div id="filetblanc"></div><a></a>
 				<?php 
 					$i=0;
-					while (list($key, $value) = each($valeur_ss_menu))
+					while (list($key, $value) = each($key_nacre))
 					{
 						if($i++)echo '<a> | </a>';				
-						if($key == $contents_rd)
+						if($key == $contents_nacre)
 						{
-							echo '<a href="../../nacre.php?'.$key.'" style=color:#214d7e>'.$value.'</a>';
+							echo '<a href="../../nacre.php?'.$value.'" style=color:#214d7e>'.$value.'</a>';
 						}
 						else
 						{
-							echo '<a href="../../nacre.php?'.$key.'">'.$value.'</a>';
+							echo '<a href="../../nacre.php?'.$value.'">'.$value.'</a>';
 						}
 					}
 				?>
@@ -74,3 +79,4 @@ fclose($handle2);
 				</header>
 		<div class=fondbleuprint>
 	</body>
+
