@@ -1,23 +1,22 @@
 	<?php require "../../header.php"; ?>
-	code cotation
 	<?php $sql = 'SELECT * FROM admin WHERE id = \'1\'';
 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 	while($admin = mysql_fetch_assoc($req)) {?>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<TR valign=top  >
-			<td>	<h1>Ventes Réalisées</h1>															</td>
-				<form action="getmoisencours.php" method="post" >
+			<td>	<h1>Ventes Réalisées</h1>																	</td>
+				<form action="get_mois.php" method="post" >
 			<td class=inputnum><label><a href="">Mois</a></label><input type="text" name="mois_en_cours" value="<?php echo $admin['mois_en_cours']  ; ?>" id="mois_en_cours" />
 				</form>
-				<form action="getanneeenmoins.php" method="post" >
+				<form action="get_annee_inf_sup.php" method="post" >
 				<input type="text"  name="annee_en_cours" value="<?php echo $admin['annee_en_cours']-1  ; ?>"  id="annee_en_cours" hidden />
 				<button type="submit" class="button">[-]</button> 
 				</form>
 			</td>
-				<form action="getanneeencours.php" method="post" >
+				<form action="get_annee.php" method="post" >
 			<td class=inputnum><label><a href="">Année<a></label><input type="text"  name="annee_en_cours" id="annee_en_cours" value="<?php echo $admin['annee_en_cours']  ; ?>"	 />
 				</form>
-				<form action="getanneeenplus.php" method="post" >
+				<form action="get_annee_inf_sup.php" method="post" >
 				<input type="text"  name="annee_en_cours" value="<?php echo $admin['annee_en_cours']+1 ; ?>"  id="annee_en_cours" hidden />
 				<button type="submit" class="button">[+]</button> 
 				</form>
@@ -27,126 +26,109 @@
 	<BR>
 	<?php include($niv.'../../calendrier.php');?>
 	<table border=0 cellpadding=0 cellspacing=0 >
-		<TR class="niv1">
-			<TD colspan=12 ><B>CLIENTS DONT LA MARCHANDISE A ÉTÉ ENVOYÉE</B></TD>
+		<tr class="niv1">
+			<TD COLSPAN=7 ALIGN=CENTER VALIGN=MIDDLE>	<B>VENTES RÉALISÉES</B>													</TD>
 		</tr>
-		<TR class="niv2">
-			<TD  STYLE="width:10%;"><B>Numclient</B>
-			<TD  STYLE="width:10%;"><B>Date cdv</B>
-			<TD  STYLE="width:20%;"><B>Nom</B>
-			<TD  STYLE="width:20%;"><B>Prenom</B>
-			<TD  STYLE="width:15%;"><B>Marge</B>
-			<TD  STYLE="width:15%;"><B>Montant</B>
-			<TD  STYLE="width:10%;"><B>Commande</B>
-		</TR>
-	<?php // Déclaration des variables de tot
-	//$fMargeTotGeneral = 0;
-	//$fPdvTotGeneral = 0;
-	?>
-	<?php // Récupération des clients
-	$sql1 = 'SELECT
+		<tr class="niv2">
+			<td STYLE="width:10%;">				<b>Numclient</b>													</TD>
+			<td STYLE="width:10%;" >			<b>Date cdv</b>														</TD>
+			<td STYLE="width:20%;" >			<b>Nom</b>														</TD>
+			<td STYLE="width:20%;" >			<b>Prénom</b>														</TD>
+			<td STYLE="width:15%;" >			<b>Marge</b>														</TD>
+			<td STYLE="width:15%;" >			<b>PDV</b>														</TD>
+			<td STYLE="width:10%;" class="display" >	<b>COMMANDE</b>														</TD>
+		</tr>
+	<?php $sql1 = 'SELECT  
+			numproduit,
+			numdossier,
 			numclient,
 			numcontact,
 			DAY(date_cdv) AS jour,
 			MONTH(date_cdv) AS mois,
 			YEAR(date_cdv) AS annee,
-			DATE(date_cdv) AS date
+			DATE(date_cdv) AS date,
+			pdv
 				FROM clients 
-			WHERE MONTH(date_cdv) = '.$admin['mois_en_cours'].'
-			AND YEAR(date_cdv) = '.$admin['annee_en_cours'].'
+			WHERE statut =\'EXPÉDIÉ\'
+			AND YEAR(date_cdv) = ' .$admin['annee_en_cours'] . ' 
+			AND MONTH(date_cdv) = ' .$admin['mois_en_cours'] . ' 
 			ORDER BY numclient DESC
-		';
+			';
 	$req1 = mysql_query($sql1) or die('Erreur SQL !<br>'.$sql1.'<br>'.mysql_error());
-	while($cli = mysql_fetch_assoc($req1)) {?>
+	while($cot = mysql_fetch_assoc($req1)) { ?>
 
-	<?php if (isset($cli['numclient']) ) {	?>
 
-	<?php // Récupération des données de lj	
-	$sql2 = 'SELECT 
-			numclient,
-			numitem,
-			position,
-			designation,
-			quantite,
-			cout_achat_unit,
-			taux_marque,
-			DAY(lj_date) AS jour,
-			MONTH(lj_date) AS mois,
-			YEAR(lj_date) AS annee,
-			DATE(lj_date) AS date
-				FROM livre_journal 
-			WHERE numclient = '.$cli['numclient'].'
-			AND attribut = \'1\'
-		';
-	$req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
-	while($cotation = mysql_fetch_assoc($req2)) {?>
-
-	<?php
-		//foreach($client as $cli)
-		//{
-	?>
-	<?php
-		//	$fMargeTot = 0;
-		//	$fPdvTot = 0;
-	?>
-		<!--tr class="niv2">
-			<td colspan=5></td>
-		</tr-->
-
+		<?php if (isset($cot['numcontact']) ) {?>
 		<?php
-		//	foreach($cotation as $cot)
-		//	{
-		//		if($cot['numclient'] == $cli['numclient'])
-		//		{
-		//			 $fMargeTot +=  $cot['quantite'] * ( $cot['cout_achat_unit'] / ( 1 - ( $cot['taux_marque'] / 100 ) ) )-$cot['cout_achat_unit'];		
-		//			 $fPdvTot +=  $cot['quantite'] * ( $cot['cout_achat_unit'] / ( 1 - ( $cot['taux_marque'] / 100 ) ) );	
-		//		}
-		//	}
-		?>
+		$sql2 = 'SELECT * FROM contacts WHERE numcontact = '.$cot['numcontact'].'';
+		$req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
+		while($contact = mysql_fetch_assoc($req2)) { ?>
+	<?php
+	$fCoutUnitGeneral = 0;
+	$fCoutTotalGeneral = 0;
+	$fMargeUnitGeneral = 0;
+	$fMargeTotGeneral = 0;
+	$fPdvUnitGeneral = 0;
+	$fPdvTotGeneral = 0;
 
-<!---->
+			//foreach($cotation as $cot)
+			//{
+					// $fCoutUnit += $cot['cout_achat_unit'];	
+					// $fCoutTotal += $cot['cout_achat_unit'] * $cot['quantite_nomenclature'];	
+					// $fMargeUnit +=  ($cot['cout_achat_unit'] / (1 - ( $cot['taux_marque'] / 100 ))) - $cot['cout_achat_unit'];	
+					// $fMargeTot += $cot['quantite_nomenclature'] * (($cot['cout_achat_unit'] / (1 - ( $cot['taux_marque'] / 100 ))) - $cot['cout_achat_unit']);	
+					// $fPdvUnit += $cot['cout_achat_unit'] / (1 - ( $cot['taux_marque'] / 100 ));	
+					 $fPdvTot +=  $cot['pdv'];	
+	?>
 		<tr class="niv3">
-				<form	name="client"	action="goto_cotation.php"	method="post" >
-				<input	type="text"	name="numclient"		id="numclient"	value="<?php echo $cli['numclient']  ; ?>" 	hidden />
-				<input	type="text"	name="numcontact"		id="numcontact"	value="<?php echo $cli['numcontact']  ; ?>" 	hidden />
-			<TD STYLE="border-left: 1px solid #b8bec3; "><button type="submit" class="button"><?php echo $cli['numclient']; ?></button>			</td>	
+				<form name="client" action="goto_facture.php" method="post" >
+				<input type="text" name="numproduit"	id="numproduit"		value="<?php echo $cot['numproduit']  ; ?>" hidden />
+				<input type="text" name="numdossier"	id="numdossier"		value="<?php echo $cot['numdossier']  ; ?>" hidden />
+				<input type="text" name="numclient"	id="numclient"		value="<?php echo $cot['numclient']  ; ?>"	hidden />
+				<input type="text" name="numcontact"	id="numcontact"		value="<?php echo $cot['numcontact']  ; ?>" hidden />
+			<TD STYLE="border-left: 1px solid #b8bec3; "><button type="submit" class="button"><?php echo $cot['numclient']; ?></button>						</td>	
 				</form>
-			<TD><?php echo strftime('%d-%m-%Y',strtotime($cli['date'] .'')); ?>										</td>
-			<?php if (isset($cli['numcontact']) ) {?>
-			<?php
-			$sql3 = 'SELECT * FROM contacts WHERE numcontact = '.$cli['numcontact'].'';
-			$req3 = mysql_query($sql3) or die('Erreur SQL !<br>'.$sql3.'<br>'.mysql_error());
-			while($contact = mysql_fetch_assoc($req3)) {?>
-			<td><?php echo $contact['nom']; ?>														</td>
-			<td><?php echo $contact['prenom']; ?>														</td>
-			<?php } //$get_contact ?>		
-			<?php } // isset ?>		
-			<td style="text-align:right;font-weight : bold;"><?php echo number_format ( $fMargeTot, 2, ",", " " ); ?> €					</td>
-			<td style="text-align:right;font-weight : bold;"><?php echo number_format ( $fPdvTot, 2, ",", " " ); ?> €					</td>
-				<form	name="modifier"	action="modifier.php"	method="post" >
-				<input	type="text"	name="numclient"		id="numclient"	value="<?php echo $cli['numclient']  ; ?>" 	hidden />
-			<TD STYLE="border-right: 1px solid #b8bec3;" class="display" ><button type="submit" class="button">[Modifier]</button>				</TD>
+			<td  style="text-align:right;font-weight : bold;"><?php echo strftime('%d-%m-%Y',strtotime($cot['date'] .'')); ?>							</td>
+			<td style="text-align:right;border-left: 1px solid #b8bec3;">	<?php echo $contact['nom']; ?>										</td>
+			<td style="text-align:right;">	<?php echo $contact['prenom']; ?>													</td>
+			<td style="text-align:right;border-left: 1px solid #b8bec3;">														</td>
+
+
+
+
+
+
+			<td  style="text-align:right;font-weight : bold;"><?php echo $cot['pdv'] ;?>												</td>
+				<form name="modifier" action="modifier.php"  method="post">
+				<input type="text" name="numclient" value="<?php echo $cot['numclient']  ; ?>" id="numclient" hidden />	
+			<td STYLE="border-right: 1px solid #b8bec3;" class="display"><button type="submit" class="button">Modifier</button>							</td>
 				</form>
 		</tr>
-<!---->
+		<TR>
+			<td colspan=7>		<div id="filet"></div>																</td>
+		</TR>		
 
-
-	<?php// } //finforeach client as cli ?>
-
-	<?php
-	//	$fMargeTotGeneral += $fMargeTot;	
-	//	$fPdvTotGeneral += $fPdvTot;	
+		<?php	
+			//	}
+		$fCoutUnitGeneral += $fCoutUnit;	
+		$fCoutTotalGeneral += $fCoutTotal;	
+		$fMargeUnitGeneral += $fMargeUnit;	
+		$fMargeTotGeneral += $fMargeTot;	
+		$fPdvUnitGeneral += $fPdvUnit;	
+		$fPdvTotGeneral += $fPdvTot;	
+	
 	?>
-	<?php } //sql2 ?>
-	<?php } //isset ?>
-	<?php } //sql1 ?>
+		<?php } //$get_contact?>		
+		<?php } // isset sql2 ?>
 
-		<tr class="niv1">
-			<td colspan=4 style="font-weight : bold;">TOTAL :</td>
-			<td style="text-align:right;font-weight : bold;"><?php echo number_format ( $fMargeTotGeneral, 2, ",", " " ); ?> €				</td>
-			<td style="text-align:right;font-weight : bold;"><?php echo number_format ( $fPdvTotGeneral, 2, ",", " " ); ?> €				</td>
+	<?php } //$get_cot ?>
+		<tr class="niv2">
+			<td colspan=2 style="font-weight : bold;">TOTAL :</td>
+			<td style="text-align:right;font-weight : bold;"><?php// echo number_format ( $fCoutUnitGeneral, 2, ",", " " ); ?> 							</td>
+			<td style="text-align:right;font-weight : bold;"><?php// echo number_format ( $fCoutTotalGeneral, 2, ",", " " ); ?> 							</td>
+			<td style="text-align:right;font-weight : bold;"><?php// echo number_format ( $fPdvUnitGeneral, 2, ",", " " ); ?> 							</td>
+			<td style="text-align:right;font-weight : bold;"><?php echo number_format ( $fPdvTotGeneral, 2, ",", " " ); ?> €							</td>
 			<td class="display">
 		</tr>
-
 	</table>
 	<?php } mysql_close(); ?>
