@@ -15,8 +15,9 @@
 
 			<td>	<h1><?php echo $contact['titre']; ?></h1>											</td>
 			<td class=inputnum><label><a href="">N° Campagne</a></label><input type="text" name="numcampagne" value="<?php echo $admin['numcampagne']  ; ?>" id="numcampagne" />	</td>
+			<form name="client" action="update_position.php" method="post" >
 			<td class=inputnum><label><a href="">N° Position</a></label><input type="text" name="position" value="<?php echo $admin['position']  ; ?>" id="position" />		
-
+			</form>
 				<table 		name="bout" border=0 cellpadding=0 cellspacing=0 >
 					<TR 	name="menu" valign=top  >
 						<td>
@@ -38,6 +39,57 @@
 	</table>
 	<table border=0 cellpadding=0 cellspacing=0 >
 		<tr class="niv1">
+			<TD COLSPAN=7 ALIGN=CENTER VALIGN=MIDDLE>	<B>Action de mailing automatisée</B>											</TD>
+		</tr>
+		<tr class="niv2">
+			<td STYLE="width:10%;">				<b>Position</b>													</TD>
+			<td STYLE="width:10%;" >			<b>Numclient</b>												</TD>
+			<td STYLE="width:70%;" >			<b>email</b>												</TD>
+			<td STYLE="width:10%;" class="display" >	<b>COMMANDE</b>													</TD>
+		</tr>
+		<?php
+		$sql2 = 'SELECT  
+			id,			
+			numcampagne,
+			numclient
+				FROM clients_campagne
+			WHERE id = '.$admin['position'].'
+
+			';
+		$req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
+		while($contact = mysql_fetch_assoc($req2)) { ?>
+
+		<tr class="niv3">
+				<form name="client" action="update_position.php" method="post" >
+				<input type="text" name="position"	id="position"		value="<?php echo $contact['id']  ; ?>" hidden />
+			<TD STYLE="border-left: 1px solid #b8bec3; "><button type="submit" class="button"><?php echo $contact['id']; ?></button>			 		</td>	
+				</form>
+				<form name="client" action="goto_client.php" method="post" >
+				<input type="text" name="numclient"	id="numclient"		value="<?php echo $contact['numclient']  ; ?>" hidden />
+			<TD STYLE="border-left: 1px solid #b8bec3; "><button type="submit" class="button"><?php echo $contact['numclient']; ?></button>					</td>	
+				</form>
+
+			<td>	<input type="text" name="position" value="valerykempf@gmail.com" id="position"  />						</td>
+
+				<form name="modifier" action="modifier.php"  method="post">
+				<input type="text" name="position" value="<?php echo $contact['position']  ; ?>" id="position" hidden />	
+			<td STYLE="border-right: 1px solid #b8bec3;" class="display"><button type="submit" class="button">Modifier</button>						</td>
+				</form>
+		</tr>
+		<TR>
+			<td colspan=7>		<div id="filet"></div>															</td>
+		</TR>		
+		<?php } //$get_contact?>		
+		<tr><td><br>
+		<tr><td  colspan=5><p>Regardez ce que j ai trouvé sur eBay!</p>
+		<tr><td><br>
+		<tr><td colspan=5><p>Bonjour ! Voici ce que j ai trouvé sur eBay. J ai pensé que ça vous plairait aussi ! Jetez un coup d œil !  Elixir 11027 Guitar Strings  80/20 Bronze Nanoweb Custom Light 11  52 1 Pack https://ebay.us/xUYcJf</p>
+
+
+	</table>
+	<br>
+	<table border=0 cellpadding=0 cellspacing=0 >
+		<tr class="niv1">
 			<TD COLSPAN=7 ALIGN=CENTER VALIGN=MIDDLE>	<B>Listing des clients concernés par la promotion</B>								</TD>
 		</tr>
 		<tr class="niv2">
@@ -52,6 +104,7 @@
 			numcampagne,
 			numclient
 				FROM clients_campagne
+			WHERE numcampagne = '.$admin['numcampagne'].'
 			ORDER BY id ASC
 			';
 		$req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
